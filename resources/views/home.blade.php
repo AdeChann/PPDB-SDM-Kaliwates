@@ -1,68 +1,333 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @vite('resources/css/app.css')
-    <title>Document</title>
-</head>
-<body>
 
+@extends('layout.layout')
 
-<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-    </a>
-    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
-        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-      </button>
+@section('content')
+ <!-- Hero Section -->
+ <section id="hero">
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
-    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-        <li>
-          <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-        </li>
-      </ul>
-    </div>
-    </div>
-  </nav>
-
-
-    {{-- heroo banner --}}
-    <section class="bg-white dark:bg-gray-900">
-        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-            <div class="mr-auto place-self-center lg:col-span-7">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Payments tool for software companies</h1>
-                <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                    Get started
-                    <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-                <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                    Speak to Sales
-                </a>
-            </div>
-            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup">
-            </div>
+    <!-- Flex Container -->
+    <div
+      class="container flex flex-col-reverse items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row"
+    >
+      <!-- Left item -->
+      <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+        <h1
+          class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left"
+        >
+        Sekolah Dasar Muhammadiyah Kaliwates Jember
+        </h1>
+        <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempora quod id, obcaecati unde debitis dolores natus tenetur ex voluptatum.
+        </p>
+        <div class="flex justify-center md:justify-start">
+          <a
+            href="#"
+            class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
+            >Daftar Sekarang</a
+          >
         </div>
-    </section>
-</body>
-</html>
+      </div>
+      <!-- Image -->
+      <div class="md:w-1/2">
+        <img src="../assets/img/logos/ilustrator.jpg"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <!-- Flex container -->
+    <div
+      class="container flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row"
+    >
+      <!-- What's Different -->
+      <div class="flex flex-col space-y-12 md:w-1/2">
+        <h2 class="max-w-md text-4xl font-bold text-center md:text-left font-Poppins">
+         Alur Pendaftaran
+        </h2>
+        <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
+          Manage provides all the functionality your team needs, without the
+          complexity. Our software is tailor-made for modern digital product
+          teams.
+        </p>
+      </div>
+
+      <!-- Numbered List -->
+      <div class="flex flex-col space-y-8 md:w-1/2">
+        <!-- List Item 1 -->
+        <div
+          class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+        >
+          <!-- Heading -->
+          <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+            <div class="flex items-center space-x-2">
+              <div
+                class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
+              >
+                01
+              </div>
+              <h3 class="text-base font-bold md:mb-4 md:hidden">
+                Track company-wide progress
+              </h3>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="hidden mb-4 text-lg font-bold md:block">
+                Buat Akun Email
+            </h3>
+            <p class="text-darkGrayishBlue">
+              Lokasi representatif di kawasan perumahan
+            </p>
+          </div>
+        </div>
+
+        {{-- list item 2 --}}
+        <div
+        class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+      >
+        <!-- Heading -->
+        <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+          <div class="flex items-center space-x-2">
+            <div
+              class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
+            >
+              02
+            </div>
+            <h3 class="text-base font-bold md:mb-4 md:hidden">
+              Track company-wide progress
+            </h3>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="hidden mb-4 text-lg font-bold md:block">
+              Buat Akun Email
+          </h3>
+          <p class="text-darkGrayishBlue">
+            Lokasi representatif di kawasan perumahan
+          </p>
+        </div>
+      </div>
+
+      {{-- list item 3 --}}
+      <div
+      class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+    >
+      <!-- Heading -->
+      <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+        <div class="flex items-center space-x-2">
+          <div
+            class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
+          >
+            03
+          </div>
+          <h3 class="text-base font-bold md:mb-4 md:hidden">
+            Track company-wide progress
+          </h3>
+        </div>
+      </div>
+      <div>
+        <h3 class="hidden mb-4 text-lg font-bold md:block">
+            Buat Akun Email
+        </h3>
+        <p class="text-darkGrayishBlue">
+          Lokasi representatif di kawasan perumahan
+        </p>
+      </div>
+    </div>
+
+
+      {{-- list item 4 --}}
+    <div
+    class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+  >
+    <!-- Heading -->
+    <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+      <div class="flex items-center space-x-2">
+        <div
+          class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
+        >
+          04
+        </div>
+        <h3 class="text-base font-bold md:mb-4 md:hidden">
+          Track company-wide progress
+        </h3>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="hidden mb-4 text-lg font-bold md:block">
+          Buat Akun Email
+      </h3>
+      <p class="text-darkGrayishBlue">
+        Lokasi representatif di kawasan perumahan
+      </p>
+    </div>
+  </div>
+
+  {{-- list item 5 --}}
+        <div
+          class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+        >
+          <!-- Heading -->
+          <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+            <div class="flex items-center space-x-2">
+              <div
+                class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
+              >
+                05
+              </div>
+              <h3 class="text-base font-bold md:mb-4 md:hidden">
+
+              </h3>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="hidden mb-4 text-lg font-bold md:block">
+                Mengisi Formulir Pendaftaran
+            </h3>
+            <p class="text-darkGrayishBlue">
+                Pengguna diarahkan ke formulir pendaftaran online.
+                Formulir meminta informasi seperti data peserta didik (nama lengkap, tempat dan tanggal lahir, alamat), informasi orang tua/wali, riwayat pendidikan sebelumnya, dll.
+            </p>
+          </div>
+        </div>
+
+      {{-- list item 6 --}}
+        <div
+          class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+        >
+          <!-- Heading -->
+          <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
+            <div class="flex items-center space-x-2">
+              <div
+                class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
+              >
+                06
+              </div>
+              <h3 class="text-base font-bold md:mb-4 md:hidden">
+                Everything you need in one place
+              </h3>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="hidden mb-4 text-lg font-bold md:block">
+                Pembayaran Biaya Pendaftaran
+            </h3>
+            <p class="text-darkGrayishBlue">
+              Stop jumping from one service to another to communicate, store
+              files, track tasks and share documents. Manage offers an
+              all-in-one team productivity solution.
+            </p>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <!-- Container to heading and testm blocks -->
+    <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
+      <!-- Heading -->
+      <h2 class="text-4xl font-bold text-center">
+        Kenapa Harus SDM Kaliwates?
+      </h2>
+      <!-- Testimonials Container -->
+      <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
+        <!-- Testimonial 1 -->
+        <div
+          class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
+        >
+          <img src="../assets/img/assetsVector/avatar-anisha.png" class="w-16 -mt-14" alt="" />
+          <h5 class="text-lg font-bold">Agya Li</h5>
+          <p class="text-sm text-darkGrayishBlue">
+            “Manage has supercharged our team’s workflow. The ability to
+            maintain visibility on larger milestones at all times keeps
+            everyone motivated.”
+          </p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+          class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
+        >
+          <img src="..assets/img/assetsVector/avatar-ali.png" class="w-16 -mt-14" alt="" />
+          <h5 class="text-lg font-bold">Sutar</h5>
+          <p class="text-sm text-darkGrayishBlue">
+            “We have been able to cancel so many other subscriptions since
+            using Manage. There is no more cross-channel confusion and
+            everyone is much more focused.”
+          </p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+          class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
+        >
+          <img src="../assets/img/assetsVector/imgavatar-richard.png" class="w-16 -mt-14" alt="" />
+          <h5 class="text-lg font-bold">Kamto</h5>
+          <p class="text-sm text-darkGrayishBlue">
+            “Manage has supercharged our team’s workflow. The ability to
+            maintain visibility on larger milestones at all times keeps
+            everyone motivated.”
+          </p>
+        </div>
+      </div>
+      <!-- Button -->
+      <div class="my-16">
+        <a
+          href="#"
+          class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
+          >Get Started</a
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta" class="bg-brightRed">
+    <!-- Flex Container -->
+    <div
+      class="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0"
+    >
+      <!-- Heading -->
+      <h2
+        class="text-5xl font-bold text-center text-white md:text-4xl md:max-w-xl md:text-left"
+      >
+        Simplify how your team works today
+      </h2>
+      <!-- Button -->
+      <div>
+        <a
+          href="#"
+          class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full shadow-2xl baseline hover:bg-gray-900"
+          >Get Started</a
+        >
+      </div>
+    </div>
+  </section>
+
+
+
+
+@endsection

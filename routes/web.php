@@ -22,3 +22,7 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('adminDashboard');
 });
+
+Route::get('/pendaftaran', function () {
+    return view('pendaftaran.pendaftaran');
+});
