@@ -34,7 +34,7 @@
         </p>
         <div class="flex justify-center md:justify-start">
           <a
-            href="#"
+            href="/pendaftaran"
             class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
             >Daftar Sekarang</a
           >
@@ -80,8 +80,7 @@
                 01
               </div>
               <h3 class="text-base font-bold md:mb-4 md:hidden">
-                Track company-wide progress
-              </h3>
+                Buat Akun Email              </h3>
             </div>
           </div>
 
@@ -90,7 +89,7 @@
                 Buat Akun Email
             </h3>
             <p class="text-darkGrayishBlue">
-              Lokasi representatif di kawasan perumahan
+                Calon peserta didik atau orang tua membuat akun pendaftaran dengan mengisi formulir registrasi online.
             </p>
           </div>
         </div>
@@ -108,18 +107,17 @@
               02
             </div>
             <h3 class="text-base font-bold md:mb-4 md:hidden">
-              Track company-wide progress
+                Login Akun Email
             </h3>
           </div>
         </div>
 
         <div>
           <h3 class="hidden mb-4 text-lg font-bold md:block">
-              Buat Akun Email
+              Login Akun Email
           </h3>
           <p class="text-darkGrayishBlue">
-            Lokasi representatif di kawasan perumahan
-          </p>
+            Setelah verifikasi berhasil, calon peserta didik atau orang tua login ke akun yang telah dibuat.          </p>
         </div>
       </div>
 
@@ -136,16 +134,15 @@
             03
           </div>
           <h3 class="text-base font-bold md:mb-4 md:hidden">
-            Track company-wide progress
-          </h3>
+            Mengisi Formulir Pendaftaran          </h3>
         </div>
       </div>
       <div>
         <h3 class="hidden mb-4 text-lg font-bold md:block">
-            Buat Akun Email
-        </h3>
+            Mengisi Formulir Pendaftaran        </h3>
         <p class="text-darkGrayishBlue">
-          Lokasi representatif di kawasan perumahan
+            Di dalam akun, pengguna mengisi formulir pendaftaran online dengan informasi seperti data calon peserta didik, alamat, riwayat pendidikan, dan lainnya.<br>
+            Pastikan formulir mencakup semua informasi yang diperlukan sesuai persyaratan PPDB.
         </p>
       </div>
     </div>
@@ -164,18 +161,17 @@
           04
         </div>
         <h3 class="text-base font-bold md:mb-4 md:hidden">
-          Track company-wide progress
+            Pembayaran atau Konfirmasi       
         </h3>
       </div>
     </div>
 
     <div>
       <h3 class="hidden mb-4 text-lg font-bold md:block">
-          Buat Akun Email
+        Pembayaran atau Konfirmasi
       </h3>
       <p class="text-darkGrayishBlue">
-        Lokasi representatif di kawasan perumahan
-      </p>
+        biaya pendaftaran, calon peserta didik atau orang tua dapat melakukan pembayaran melalui sistem pembayaran offline      </p>
     </div>
   </div>
 
@@ -192,52 +188,20 @@
                 05
               </div>
               <h3 class="text-base font-bold md:mb-4 md:hidden">
-
+                Cetak Bukti Pendaftaran   
               </h3>
             </div>
           </div>
 
           <div>
             <h3 class="hidden mb-4 text-lg font-bold md:block">
-                Mengisi Formulir Pendaftaran
-            </h3>
+                Cetak Bukti Pendaftaran     
+             </h3>
             <p class="text-darkGrayishBlue">
-                Pengguna diarahkan ke formulir pendaftaran online.
-                Formulir meminta informasi seperti data peserta didik (nama lengkap, tempat dan tanggal lahir, alamat), informasi orang tua/wali, riwayat pendidikan sebelumnya, dll.
+                Setelah proses pendaftaran selesai, pengguna dapat mencetak bukti pendaftaran sebagai tanda bahwa pendaftaran telah berhasil.
             </p>
           </div>
         </div>
-
-      {{-- list item 6 --}}
-        <div
-          class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
-        >
-          <!-- Heading -->
-          <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent">
-            <div class="flex items-center space-x-2">
-              <div
-                class="px-4 py-2 text-white rounded-full md:py-1 bg-brightRed"
-              >
-                06
-              </div>
-              <h3 class="text-base font-bold md:mb-4 md:hidden">
-                Everything you need in one place
-              </h3>
-            </div>
-          </div>
-
-          <div>
-            <h3 class="hidden mb-4 text-lg font-bold md:block">
-                Pembayaran Biaya Pendaftaran
-            </h3>
-            <p class="text-darkGrayishBlue">
-              Stop jumping from one service to another to communicate, store
-              files, track tasks and share documents. Manage offers an
-              all-in-one team productivity solution.
-            </p>
-          </div>
-
-
 
         </div>
       </div>
@@ -259,7 +223,7 @@
           class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
         >
           <img src="../assets/img/assetsVector/avatar-anisha.png" class="w-16 -mt-14" alt="" />
-          <h5 class="text-lg font-bold">Agya Li</h5>
+          <h5 class="text-lg font-bold">kamto</h5>
           <p class="text-sm text-darkGrayishBlue">
             “Manage has supercharged our team’s workflow. The ability to
             maintain visibility on larger milestones at all times keeps
@@ -314,7 +278,7 @@
       <h2
         class="text-5xl font-bold text-center text-white md:text-4xl md:max-w-xl md:text-left"
       >
-        Simplify how your team works today
+        Daftarkan Dirimu Sekarang Juga
       </h2>
       <!-- Button -->
       <div>

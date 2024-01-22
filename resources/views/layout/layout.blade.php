@@ -60,15 +60,10 @@
       <!-- List Container -->
       <div class="flex justify-around space-x-32">
         <div class="flex flex-col space-y-3 text-white">
-          <a href="#" class="hover:text-brightRed">Home</a>
-          <a href="#" class="hover:text-brightRed">Pricing</a>
-          <a href="#" class="hover:text-brightRed">Products</a>
-          <a href="#" class="hover:text-brightRed">About</a>
-        </div>
-        <div class="flex flex-col space-y-3 text-white">
-          <a href="#" class="hover:text-brightRed">Careers</a>
-          <a href="#" class="hover:text-brightRed">Community</a>
-          <a href="#" class="hover:text-brightRed">Privacy Policy</a>
+          <a href="#" class="hover:text-brightRed">Beranda</a>
+          <a href="#" class="hover:text-brightRed">Pendaftaran</a>
+          <a href="#" class="hover:text-brightRed">Informasi</a>
+          <a href="#" class="hover:text-brightRed">Kontak</a>
         </div>
       </div>
 

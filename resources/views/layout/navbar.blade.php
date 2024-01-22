@@ -9,9 +9,9 @@
   </div>
   <!-- Menu Items -->
   <div class="hidden space-x-6 md:flex mr-9 font-Poppins">
-    <a href="#" class="hover:text-darkGrayishBlue text-lg">Beranda</a>
-    <a href="#" class="hover:text-darkGrayishBlue text-lg">Pendaftaran</a>
-    <a href="#" class="hover:text-darkGrayishBlue text-lg">Tentang</a>
+    <a href="/beranda" class="hover:text-darkGrayishBlue text-lg">Beranda</a>
+    <a href="/" class="hover:text-darkGrayishBlue text-lg">Pendaftaran</a>
+    <a href="#" class="hover:text-darkGrayishBlue text-lg">Informasi</a>
     <a href="#" class="hover:text-darkGrayishBlue text-lg ">Kontak</a>
   </div>
   <!-- Button -->
@@ -40,7 +40,7 @@
   >
     <a href="#">Beranda</a>
     <a href="#">Formulir</a>
-    <a href="#">Tentang</a>
+    <a href="#">Informasi</a>
     <a href="#">Kontak</a>
   </div>
 </div>

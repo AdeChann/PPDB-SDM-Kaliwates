@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AnakController;
+use App\Http\Controllers\pendaftaranController;
+use App\Http\Controllers\PendaftaranController as ControllersPendaftaranController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +23,16 @@ Route::get('/', function () {
 
 
 Route::get('/admin', function () {
-    return view('adminDashboard');
+    return view('admin.dashboard');
 });
 
-Route::get('/pendaftaran', function () {
-    return view('pendaftaran.pendaftaran');
+Route::get('/admin/table', function () {
+    return view('admin.tableDashboard');
 });
+
+Route::get('/login', function () {
+    return view('auth.login');
+});
+
+Route::get('/pendaftaran', [PendaftaranController::class, 'showForm'])->name('form');
+Route::post('/submit-form', [PendaftaranController::class, 'submitForm'])->name('submit.form');
