@@ -34,7 +34,7 @@
         </p>
         <div class="flex justify-center md:justify-start">
           <a
-            href="/pendaftaran"
+            href="/daftar/ppdb"
             class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
             >Daftar Sekarang</a
           >
@@ -161,7 +161,7 @@
           04
         </div>
         <h3 class="text-base font-bold md:mb-4 md:hidden">
-            Pembayaran atau Konfirmasi       
+            Pembayaran atau Konfirmasi
         </h3>
       </div>
     </div>
@@ -188,14 +188,14 @@
                 05
               </div>
               <h3 class="text-base font-bold md:mb-4 md:hidden">
-                Cetak Bukti Pendaftaran   
+                Cetak Bukti Pendaftaran
               </h3>
             </div>
           </div>
 
           <div>
             <h3 class="hidden mb-4 text-lg font-bold md:block">
-                Cetak Bukti Pendaftaran     
+                Cetak Bukti Pendaftaran
              </h3>
             <p class="text-darkGrayishBlue">
                 Setelah proses pendaftaran selesai, pengguna dapat mencetak bukti pendaftaran sebagai tanda bahwa pendaftaran telah berhasil.

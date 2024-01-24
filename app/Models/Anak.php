@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Anak extends Model
 {
     use HasFactory;
+    protected $table ='anaks';
     protected $fillable = [
+        'orangtua_id',
+        'wali_id',
         'nama_lengkap',
         'nama_panggilan',
         'nik',
@@ -49,4 +52,11 @@ class Anak extends Model
         'tanggal_mendaftar',
         // Tambahkan field sesuai dengan struktur tabel
     ];
+    public function orang_tuas(){
+        return $this->belongsTo(OrangTua::class, "orangtua_id");
+    }
+
+    public function wali(){
+        return $this->belongsTo(Wali::class, "wali_id");
+    }
 }

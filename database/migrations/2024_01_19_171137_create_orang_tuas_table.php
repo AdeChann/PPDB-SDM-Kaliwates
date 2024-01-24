@@ -13,26 +13,26 @@ return new class extends Migration
     {
         Schema::create('orang_tuas', function (Blueprint $table) {
             $table->id();
-            $table->string("Nama Ayah Kandung",255);
-            $table->bigInteger("Nik Ayah");
-            $table->string("Tempat(Ayah)",100);
-            $table->date("Tanggal Lahir(Ayah)");
-            $table->string("Pendidikan Terakhir(Ayah)",255);
-            $table->string("Pekerjaan(Ayah)",100);
-            $table->bigInteger("Penghasilan per bulan(Ayah)",);
-            $table->string("Berkebutuhan Khusus(Ayah)",100);
-            $table->string("Alamat(Ayah)",255)->nullable();
-            $table->bigInteger("No Hp(Ayah)");
-            $table->string("Nama Ibu Kandung",255);
-            $table->string("NIK Ibu",255);
-            $table->string("Tempat(Ibu)",100);
-            $table->date("Tanggal (Ibu)");
-            $table->string("Pendidikan Terakhir(Ibu)",255);
-            $table->string("Pekerjaan(Ibu)",100);
-            $table->bigInteger("Penghasilan Per Bulan(Ibu)");
-            $table->string("Berkebutuhan Khusus(Ibu)");
-            $table->string("Alamat(Ibu)",255)->nullable();
-            $table->bigInteger("No Hp(Ibu)");
+            $table->string("nama_ayah_kandung",255);
+            $table->bigInteger("nik_ayah");
+            $table->string("tempat_ayah",100);
+            $table->date("tanggal_lahir_ayah");
+            $table->string("pendidikan_terakhir_ayah",255);
+            $table->string("pekerjaan_ayah",100);
+            $table->bigInteger("penghasilan_per_bulan_ayah",);
+            $table->string("berkebutuhan_khusus_ayah",100);
+            $table->string("alamat_ayah",255)->nullable();
+            $table->bigInteger("no_hp_ayah");
+            $table->string("nama_ibu_kandung",255);
+            $table->string("nik_ibu",255);
+            $table->string("tempat_ibu",100);
+            $table->date("tanggal_ibu)");
+            $table->string("pendidikan_terakhir_ibu",255);
+            $table->string("pekerjaan_ibu",100);
+            $table->bigInteger("penghasilan_per_bulan_ibu");
+            $table->string("berkebutuhan_khusus_ibu");
+            $table->string("alamat_ibu",255)->nullable();
+            $table->bigInteger("no_hp_ibu");
             $table->timestamps();
         });
     }

@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 
-
+<body>
 <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
     <span class="sr-only">Open sidebar</span>
     <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +41,7 @@
                    <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"/>
                 </svg>
                 <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
-                <span class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>
+                <span class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>
              </a>
           </li>
           <li>
@@ -91,47 +91,286 @@
     </div>
  </aside>
 
+    <div class="-m-1.5 overflow-x-auto container mx-auto py-9 px-8 w-full p-24">
+      <div class="p-1.5 min-w-full inline-block align-middle">
+        <div class="overflow-hidden">
+          <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+            <thead>
+              <tr>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Title</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Age</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Email</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+                <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black">John Brown</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">Regional Paradigm Technician</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">john@site.com</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">45</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                  <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Delete</button>
+                </td>
+              </tr>
 
-<div class="w-full">
-  <div class="flex flex-col">
-    <div class="w-full max-w-xl mx-auto">
-      <div class="flex justify-between mb-8">
-        <h2 class="text-2xl font-bold">Form Table Dashboard</h2>
-        <a href="#" class="text-blue-500 hover:text-blue-700">Tambah Data</a>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black">Jim Green</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">Forward Response Developer</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">jim@site.com</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">27</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">London No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                  <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Delete</button>
+                </td>
+              </tr>
+
+              <tr class="text-slate-950">
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black">Joe Black</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">Product Directives Officer</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">joe@site.com</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">31</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-black">Sidney No. 1 Lake Park</td>
+                <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                  <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <table class="w-full table-fixed">
+    </div>
+  </div>
+
+  <div class="container mx-auto p-6">
+    <div class="-mx-4 overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
         <thead>
           <tr>
-            <th class="text-left">Nama</th>
-            <th class="text-left">Umur</th>
-            <th class="text-left">Alamat</th>
-            <th class="text-center">Aksi</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Title</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Age</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Title</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Age</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Email</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
+            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">Action</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>John Doe</td>
-            <td>25</td>
-            <td>Jalan Merdeka, Banyuwangi</td>
-            <td class="text-center">
-              <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
-              <a href="#" class="text-red-500 hover:text-red-700">Hapus</a>
+        <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+            @foreach ($datas as $data)
+
+
+
+            <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black"> {{ $data->nama_lengkap}}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-black"> {{ $data->tempat}}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">john@site.com</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">45</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">New York No. 1 Lake Park</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-black"></td>
+
+
+            <td class="px-6 py-4 text-right">
+              <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Edit</button>
+              <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-red-600 hover:text-red-800 disabled:opacity-50 disabled:pointer-events-none dark:text-red-500 dark:hover:text-red-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Delete</button>
             </td>
           </tr>
-          <tr>
-            <td>Jane Doe</td>
-            <td>28</td>
-            <td>Jalan Diponegoro, Banyuwangi</td>
-            <td class="text-center">
-              <a href="#" class="text-blue-500 hover:text-blue-700">Edit</a>
-              <a href="#" class="text-red-500 hover:text-red-700">Hapus</a>
-            </td>
-          </tr>
+
+          @endforeach
+          <!-- ... (more rows) ... -->
+
         </tbody>
       </table>
     </div>
   </div>
-</div>
+
 </body>
 
 </html>
