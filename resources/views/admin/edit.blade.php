@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulir Pendaftaran Anak</title>
+    <title>Edit Data Anak</title>
     @vite("resources/css/app.css")
     @vite("resources/css/home.css")
 </head>
@@ -15,7 +15,7 @@
     <div class="flex items-center justify-between">
       <!-- Logo -->
       <div class="pt-2 ">
-        <img src="../assets/img/logos/logo2.png" alt="SD Muhammadiyah Kaliwates">
+        <img src="../assets/img/logos/logo1.png" alt="SD Muhammadiyah Kaliwates">
       </div>
       <!-- Menu Items -->
       <div class="hidden space-x-6 md:flex mr-9 font-Poppins">
@@ -68,10 +68,11 @@
         </div>
         <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
 
-            <form action="{{route('user.store')}}"method="POST">
+            <form action="/user/{{$user->id}}"method="POST">
+                @method('put')
                 @csrf
               <h6 class="text-blueGray-400 text-lg bg-brightRed mt-3 mb-6 font-bold uppercase">
-                Identitas Anak
+                Edit Identitas Anak
               </h6>
               <div class="flex flex-wrap">
                 <div class="w-full lg:w-6/12 px-4">
@@ -80,7 +81,7 @@
                       Nama Lengkap
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="nama_lengkap">
+                    name="nama_lengkap" value="{{$user->nama_lengkap}}">
                   </div>
                 </div>
                 <div class="w-full lg:w-6/12 px-4">
@@ -89,7 +90,7 @@
                       Nama Panggilan
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="nama_panggilan">
+                    name="nama_panggilan" value="{{$user->nama_panggilan}}">
                 </div>
                 </div>
                 <div class="w-full lg:w-6/12 px-4">
@@ -98,7 +99,7 @@
                             NIK
                             </label>
                             <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                            name="nik" >
+                            name="nik" value="{{$user->nik}}">
                         </div>
 
                 </div>
@@ -108,7 +109,7 @@
                       No. Kartu Keluarga
                     </label>
                     <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="no_kartu_keluarga" >
+                    name="no_kartu_keluarga"  value="{{$user->no_kartu_keluarga}}">
                   </div>
                 </div>
               </div>
@@ -119,7 +120,7 @@
                       No. Akta Lahir
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="no_kartu_akta_lahir" >
+                    name="no_kartu_akta_lahir"  value="{{$user->no_kartu_akta_lahir}}">
                   </div>
                 </div>
 
@@ -129,7 +130,7 @@
                       Tempat Lahir
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="tempat" >
+                    name="tempat" value="{{$user->tempat}}" >
                   </div>
                 </div>
 
@@ -139,7 +140,7 @@
                       Tanggal Lahir
                     </label>
                     <input type="date" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="tanggal_lahir">
+                    name="tanggal_lahir" value="{{$user->tanggal_lahir}}">
                   </div>
                 </div>
 
@@ -149,7 +150,7 @@
                       Kewarganegaraan
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="kewarganegaraan">
+                    name="kewarganegaraan" value="{{$user->kewarganegaraan}}">
                   </div>
                 </div>
 
@@ -158,8 +159,11 @@
                     <label class="block uppercase text-blueGray-600 text-sm font-bold mb-2">
                       Berkebutuhan Khusus
                     </label>
-                    <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="berkebutuhan_khusus" >
+                    <select name="berkebutuhan_khusus">
+                        <option value="Ya">Pilih</option>
+                        <option value="Ya"@if($user->berkebutuhan_khusus == "Ya")selected @endif>Ya</option>
+                        <option value="Tidak"@if($user->berkebutuhan_khusus == "Tidak")selected @endif>Tidak</option>
+                    </select>
                   </div>
                 </div>
 
@@ -169,8 +173,9 @@
                       Jenis Kelamin
                     </label>
                     <select name="jenis_kelamin">
-                      <option value="laki-laki">Laki-laki</option>
-                      <option value="perempuan">Perempuan</option>
+                      <option value="pilih jenis kelamin">Pilih Jenis Kelamin</option>
+                      <option value="laki-laki" @if($user->jenis_kelamin == "Laki-laki") selected @endif>Laki-laki</option>
+                      <option value="perempuan" @if($user->jenis_kelamin == "Perempuan") selected @endif>Perempuan</option>
                   </select>
               </div>
                 </div>
@@ -181,7 +186,7 @@
                       Usia
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="usia">
+                    name="usia" value="{{$user->usia}}">
                   </div>
                 </div>
 
@@ -190,9 +195,9 @@
                     <label class="block uppercase text-blueGray-600 text-sm font-bold mb-2">
                       Alamat Tempat Tinggal
                     </label>
-                    <textarea type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="alamat_tempat_tinggal">
-                    </textarea>
+                    <input type="text"  class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    name="alamat_tempat_tinggal" value="{{$user->alamat_tempat_tinggal}}">
+                    <input/>
                   </div>
                 </div>
 
@@ -202,7 +207,7 @@
                       RT
                     </label>
                     <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="rt" >
+                    name="rt" value="{{$user->rt}}" >
                   </div>
                 </div>
 
@@ -212,7 +217,7 @@
                       RW
                     </label>
                     <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="rw" >
+                    name="rw" value="{{$user->rw}}" >
                   </div>
                 </div>
 
@@ -222,7 +227,7 @@
                       Desa/ Kelurahan
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="desa" >
+                    name="desa" value="{{$user->desa}}" >
                   </div>
                 </div>
 
@@ -232,7 +237,7 @@
                       Kecamatan
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="kecamatan" >
+                    name="kecamatan" value="{{$user->kecamatan}}" >
                   </div>
                 </div>
 
@@ -242,7 +247,7 @@
                       Lintang
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="lintang">
+                    name="lintang" value="{{$user->lintang}}">
                   </div>
                 </div>
 
@@ -252,7 +257,7 @@
                       Bujur
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="bujur">
+                    name="bujur" value="{{$user->bujur}}">
                   </div>
                 </div>
 
@@ -262,7 +267,7 @@
                       Kode Pos
                     </label>
                     <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="kode_pos">
+                    name="kode_pos" value="{{$user->kode_pos}}">
                   </div>
                 </div>
 
@@ -272,11 +277,12 @@
                       Tinggal Bersama
                     </label>
                     <select name="tempat_tinggal">
-                      <option value="Orang Tua">Orang Tua</option>
-                      <option value="Wali">Wali</option>
-                      <option value="Kos">Kos</option>
-                      <option value="Asrama">Asrama</option>
-                      <option value="Panti Asuhan">Panti Asuhan</option>
+                      <option value="Pilih">Pilih</option>
+                      <option value="Orang Tua"@if($user->tempat_tinggal == "Orang Tua") selected @endif>Orang Tua</option>
+                      <option value="Wali"@if($user->tempat_tinggal == "Wali") selected @endif >Wali</option>
+                      <option value="Kos"@if($user->tempat_tinggal == "Kos") selected @endif>Kos</option>
+                      <option value="Asrama" @if($user->tempat_tinggal == "Asrama") selected @endif>Asrama</option>
+                      <option value="Panti Asuhan" @if($user->tempat_tinggal == "Panti Asuhan") selected @endif>Panti Asuhan</option>
                   </select>
                </div>
                 </div>
@@ -287,7 +293,7 @@
                       Alat Transportasi
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="alat_transportasi">
+                    name="alat_transportasi" value="{{$user->alat_transportasi}}">
                   </div>
                 </div>
 
@@ -297,7 +303,7 @@
                       Nomor Telepon
                     </label>
                     <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="no_hp">
+                    name="no_hp" value="{{$user->no_hp}}">
                   </div>
                 </div>
 
@@ -307,7 +313,7 @@
                       Email Anak
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="email_anak">
+                    name="email_anak" value="{{$user->email_anak}}">
                   </div>
                 </div>
 
@@ -317,12 +323,13 @@
                       Agama
                     </label>
                     <select name="agama">
-                      <option value="Islam">Islam</option>
-                      <option value="Hindu">Hindu</option>
-                      <option value="Kristen">Kristen</option>
-                      <option value="Katolik">Katolik</option>
-                      <option value="Buddha">Buddha</option>
-                      <option value="Khonghucu">Khonghucu</option>
+                      <option value="pilih agama">Pilih Agama</option>
+                      <option value="Islam"@if($user->agama == "Islam") selected @endif>Islam</option>
+                      <option value="Hindu"@if($user->agama == "Hindu") selected @endif>Hindu</option>
+                      <option value="Kristen"@if($user->agama == "Kristen") selected @endif>Kristen</option>
+                      <option value="Katolik"@if($user->agama == "Katolik") selected @endif>Katolik</option>
+                      <option value="Buddha"@if($user->agama == "Buddha") selected @endif>Buddha</option>
+                      <option value="Khonghucu"@if($user->agama == "Khonghucu") selected @endif>Khonghucu</option>
                   </select>
                </div>
                 </div>
@@ -333,7 +340,7 @@
                       Hobi
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="hobi">
+                    name="hobi" value="{{$user->hobi}}">
                   </div>
                 </div>
 
@@ -343,7 +350,7 @@
                       Cita-cita
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="cita_cita">
+                    name="cita_cita" value="{{$user->cita_cita}}">
                   </div>
                 </div>
 
@@ -353,7 +360,7 @@
                       Anak ke  (sesuai kk)
                     </label>
                     <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="anak_ke">
+                    name="anak_ke" value="{{$user->anak_ke}}">
                   </div>
                 </div>
 
@@ -363,7 +370,7 @@
                       Jumlah Saudara Kandung
                     </label>
                     <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="jumlah_saudara_kandung">
+                    name="jumlah_saudara_kandung" value="{{$user->jumlah_saudara_kandung}}">
                   </div>
                 </div>
 
@@ -373,7 +380,7 @@
                       Bahasa Sehari-hari
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="bahasa_sehari_hari">
+                    name="bahasa_sehari_hari" value="{{$user->bahasa_sehari_hari}}">
                   </div>
                 </div>
 
@@ -383,7 +390,7 @@
                       Tinggi Badan (cm)
                     </label>
                     <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="tinggi_badan">
+                    name="tinggi_badan" value="{{$user->tinggi_badan}}">
                   </div>
                 </div>
 
@@ -393,7 +400,7 @@
                       Berat Badan (kg)
                     </label>
                     <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="berat_badan">
+                    name="berat_badan" value="{{$user->berat_badan}}">
                   </div>
                 </div>
 
@@ -403,7 +410,7 @@
                       Asal TK/RA, SD/MI
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="asal_tk_ra_sd_mi">
+                    name="asal_tk_ra_sd_mi" value="{{$user->asal_tk_ra_sd_mi}}">
                   </div>
                 </div>
 
@@ -413,7 +420,7 @@
                       NPSN TK/RA, SD/MI
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="npsn_tk_ra_sd_mi">
+                    name="npsn_tk_ra_sd_mi" value="{{$user->npsn_tk_ra_sd_mi}}">
                   </div>
                 </div>
 
@@ -423,7 +430,7 @@
                         NISN
                       </label>
                       <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                      name="nisn">
+                      name="nisn" value="{{$user->nisn}}">
                     </div>
                   </div>
 
@@ -433,8 +440,9 @@
                       Penerima KPS/KPH
                     </label>
                     <select name="penerima_kps_kph">
-                      <option value="Ya">Ya</option>
-                      <option value="Tidak">Tidak</option>
+                      <option value="Pilih">Pilih</option>
+                      <option value="Ya"@if($user->penerima_kps_kph == "Ya") selected @endif>Ya</option>
+                      <option value="Tidak"@if($user->penerima_kps_kph == "Tidak") selected @endif>Tidak</option>
                   </select>
               </div>
                 </div>
@@ -445,8 +453,9 @@
                       Apakah Memiliki KIP
                     </label>
                     <select name="kip">
-                      <option value="Ya">Ya</option>
-                      <option value="Tidak">Tidak</option>
+                      <option value="Pilih">Pilih</option>
+                      <option value="Ya"@if($user->kip == "Ya") selected @endif>Ya</option>
+                      <option value="Tidak"@if($user->kip == "Tidak") selected @endif>Tidak</option>
                   </select>
                </div>
                 </div>
@@ -457,8 +466,9 @@
                       Bersedia Menerima PIP
                     </label>
                     <select name="pip">
-                      <option value="Ya">Ya</option>
-                      <option value="Tidak">Tidak</option>
+                      <option value="Pilih">Pilih</option>
+                      <option value="Ya"@if($user->pip == "Ya") selected @endif>Ya</option>
+                      <option value="Tidak"@if($user->pip == "Tidak") selected @endif>Tidak</option>
                   </select>
               </div>
                 </div>
@@ -469,7 +479,7 @@
                         Diterima di Kelas
                       </label>
                       <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                      name="diterima_di_kelas">
+                      name="diterima_di_kelas" value="{{$user->diterima_di_kelas}}">
                     </div>
                   </div>
 
@@ -479,7 +489,7 @@
                       Tanggal Mendaftar
                     </label>
                     <input type="date" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="tanggal_mendaftar">
+                    name="tanggal_mendaftar" value="{{$user->tanggal_mendaftar}}">
                   </div>
                 </div>
 
@@ -498,7 +508,7 @@
                         Nama Ayah Kandung
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="nama_ayah_kandung">
+                    name="nama_ayah_kandung" value="{{$user->nama_ayah_kandung}}">
                     </div>
                 </div>
 
@@ -508,7 +518,7 @@
                         Nik Ayah Kandung
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="nik_ayah">
+                    name="nik_ayah" value="{{$user->nik_ayah}}">
                     </div>
                 </div>
 
@@ -518,7 +528,7 @@
                         Tempat Lahir
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="tempat_ayah">
+                    name="tempat_ayah" value="{{$user->tempat_ayah}}">
                     </div>
                 </div>
 
@@ -528,7 +538,7 @@
                         Tanggal Lahir
                     </label>
                     <input type="date" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="tanggal_lahir_ayah">
+                    name="tanggal_lahir_ayah" value="{{$user->tanggal_lahir_ayah}}">
                     </div>
                 </div>
 
@@ -538,7 +548,7 @@
                         Pendidikan Terakhir
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="pendidikan_terakhir_ayah">
+                    name="pendidikan_terakhir_ayah" value="{{$user->pendidikan_terakhir_ayah}}">
                     </div>
                 </div>
 
@@ -548,7 +558,7 @@
                         Pekerjaan
                     </label>
                     <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="pekerjaan_ayah">
+                    name="pekerjaan_ayah" value="{{$user->pekerjaan_ayah}}">
                     </div>
                 </div>
 
@@ -558,13 +568,13 @@
                         Penghasilan Per bulan
                     </label>
                     <select name="penghasilan_per_bulan_ayah">
-                        <option value="1"> < Rp. 500.000</option>
-                        <option value="2">Rp. 500.000,- s/d Rp. 999.999,-</option>
-                        <option value="3">Rp. 1.000.000,- s/d Rp. 1.999.999,-</option>
-                        <option value="4">Rp. 2.000.000,- s/d Rp. 4.999.999,-</option>
-                        <option value="5">Rp. 5.000.000,- s/d Rp. 20.000.000,-</option>
-                        <option value="6">> Rp. 20.000.000,-</option>
-                        <option value="7">Tidak Berpenghasilan</option>
+                        <option value="1"@if($user->penghasilan_per_bulan_ayah == "1") selected @endif> < Rp. 500.000</option>
+                        <option value="2"@if($user->penghasilan_per_bulan_ayah == "2")selected @endif>Rp. 500.000,- s/d Rp. 999.999,-</option>
+                        <option value="3"@if($user->penghasilan_per_bulan_ayah == "3")selected @endif>Rp. 1.000.000,- s/d Rp. 1.999.999,-</option>
+                        <option value="4"@if($user->penghasilan_per_bulan_ayah == "4")selected @endif>Rp. 2.000.000,- s/d Rp. 4.999.999,-</option>
+                        <option value="5"@if($user->penghasilan_per_bulan_ayah == "5")selected @endif>Rp. 5.000.000,- s/d Rp. 20.000.000,-</option>
+                        <option value="6"@if($user->penghasilan_per_bulan_ayah == "6")selected @endif>> Rp. 20.000.000,-</option>
+                        <option value="7"@if($user->penghasilan_per_bulan_ayah == "7")selected @endif>Tidak Berpenghasilan</option>
                     </select>
                 </div>
                 </div>
@@ -575,8 +585,9 @@
                         Berkebutuhan khusus
                     </label>
                     <select name="berkebutuhan_khusus_ayah">
-                        <option value="Ya">Ya</option>
-                        <option value="Tidak">Tidak</option>
+                        <option value="Ya">Pilih</option>
+                        <option value="Ya"@if($user->berkebutuhan_khusus_ayah == "Ya")selected @endif>Ya</option>
+                        <option value="Tidak"@if($user->berkebutuhan_khusus_ayah == "Tidak")selected @endif>Tidak</option>
                     </select>
                 </div>
                 </div>
@@ -586,8 +597,8 @@
                     <label class="block uppercase text-blueGray-600 text-sm font-bold mb-2">
                         Alamat(kosongi jika sama)
                     </label>
-                    <textarea type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="alamat_ayah"></textarea>
+                    <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    name="alamat_ayah" value="{{$user->alamat_ayah}}"></input>
                     </div>
                 </div>
 
@@ -597,7 +608,7 @@
                         Nomor Telepon
                     </label>
                     <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                    name="no_hp_ayah">
+                    name="no_hp_ayah" value="{{$user->no_hp_ayah}}">
                     </div>
                 </div>
 
@@ -610,7 +621,7 @@
                         Nama Ibu Kandung
                         </label>
                         <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        name="nama_ibu_kandung">
+                        name="nama_ibu_kandung" value="{{$user->nama_ibu_kandung}}">
                     </div>
                     </div>
 
@@ -620,7 +631,7 @@
                             NIK Ibu Kandung
                             </label>
                             <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                            name="nik_ibu">
+                            name="nik_ibu" value="{{$user->nik_ibu}}">
                         </div>
                         </div>
 
@@ -630,7 +641,7 @@
                         Tempat Lahir
                         </label>
                         <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        name="tempat_ibu">
+                        name="tempat_ibu" value="{{$user->tempat_ibu}}">
                     </div>
                     </div>
 
@@ -640,7 +651,7 @@
                         Tanggal Lahir
                         </label>
                         <input type="date" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        name="tanggal_lahir_ibu">
+                        name="tanggal_lahir_ibu" value="{{$user->tanggal_lahir_ibu}}">
                     </div>
                     </div>
 
@@ -650,7 +661,7 @@
                             Pendidikan Terakhir
                         </label>
                         <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        name="pendidikan_terakhir_ibu">
+                        name="pendidikan_terakhir_ibu" value="{{$user->pendidikan_terakhir_ibu}}">
                         </div>
                     </div>
 
@@ -660,7 +671,7 @@
                         Pekerjaan
                         </label>
                         <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        name="pekerjaan_ibu">
+                        name="pekerjaan_ibu" value="{{$user->pekerjaan_ibu}}">
                     </div>
                     </div>
 
@@ -670,13 +681,13 @@
                         Penghasilan Per bulan
                         </label>
                         <select name="penghasilan_per_bulan_ibu">
-                        <option value="1"> < Rp. 500.000</option>
-                        <option value="2">Rp. 500.000,- s/d Rp. 999.999,-</option>
-                        <option value="3">Rp. 1.000.000,- s/d Rp. 1.999.999,-</option>
-                        <option value="4">Rp. 2.000.000,- s/d Rp. 4.999.999,-</option>
-                        <option value="5">Rp. 5.000.000,- s/d Rp. 20.000.000,-</option>
-                        <option value="6">> Rp. 20.000.000,-</option>
-                        <option value="7">Tidak Berpenghasilan</option>
+                        <option value="1"@if($user->penghasilan_per_bulan_ibu == "1")selected @endif> < Rp. 500.000</option>
+                        <option value="2"@if($user->penghasilan_per_bulan_ibu == "2")selected @endif>Rp. 500.000,- s/d Rp. 999.999,-</option>
+                        <option value="3"@if($user->penghasilan_per_bulan_ibu == "3")selected @endif>Rp. 1.000.000,- s/d Rp. 1.999.999,-</option>
+                        <option value="4"@if($user->penghasilan_per_bulan_ibu == "4")selected @endif>Rp. 2.000.000,- s/d Rp. 4.999.999,-</option>
+                        <option value="5"@if($user->penghasilan_per_bulan_ibu == "5")selected @endif>Rp. 5.000.000,- s/d Rp. 20.000.000,-</option>
+                        <option value="6"@if($user->penghasilan_per_bulan_ibu == "6")selected @endif>> Rp. 20.000.000,-</option>
+                        <option value="7"@if($user->penghasilan_per_bulan_ibu == "7")selected @endif>Tidak Berpenghasilan</option>
                     </select>
                     </div>
                     </div>
@@ -687,8 +698,8 @@
                         Berkebutuhan Khusus
                         </label>
                         <select name="berkebutuhan_khusus_ibu">
-                        <option value="Ya">Ya</option>
-                        <option value="Tidak">Tidak</option>
+                        <option value="Ya"@if($user->berkebutuhan_khusus_ibu == "Ya")selected @endif>Ya</option>
+                        <option value="Tidak"@if($user->berkebutuhan_khusus_ibu == "Tidak")selected @endif>Tidak</option>
                     </select>
                     </div>
                     </div>
@@ -698,9 +709,9 @@
                         <label class="block uppercase text-blueGray-600 text-sm font-bold mb-2">
                         Alamat(kosongi jika sama)
                         </label>
-                        <textarea type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        name="alamat_ibu"
-                        ></textarea>
+                        <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                        name="alamat_ibu" value="{{$user->alamat_ibu}}"
+                        ></input>
                     </div>
                     </div>
 
@@ -710,7 +721,7 @@
                         Nomor Telepon
                         </label>
                         <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        name="no_hp_ibu">
+                        name="no_hp_ibu" value="{{$user->no_hp_ibu}}">
                     </div>
                     </div>
 
@@ -731,7 +742,7 @@
                     Nama Wali
                 </label>
                 <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                name="nama_wali" >
+                name="nama_wali" value="{{$user->nama_wali}}">
                 </div>
             </div>
 
@@ -741,7 +752,7 @@
                     Nik Wali
                 </label>
                 <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                name="nik_wali">
+                name="nik_wali" value="{{$user->nik_wali}}">
                 </div>
             </div>
 
@@ -751,7 +762,7 @@
                     Tempat Lahir
                 </label>
                 <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                name="tempat_wali">
+                name="tempat_wali" value="{{$user->tempat_wali}}">
                 </div>
             </div>
 
@@ -761,7 +772,7 @@
                     Tanggal Lahir
                 </label>
                 <input type="date" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                name="tanggal_lahir_wali">
+                name="tanggal_lahir_wali" value="{{$user->tanggal_lahir_wali}}">
                 </div>
             </div>
 
@@ -771,7 +782,7 @@
                     Pendidikan Terakhir
                 </label>
                 <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                name="pendidikan_terakhir_wali">
+                name="pendidikan_terakhir_wali" value="{{$user->pendidikan_terakhir_wali}}">
                 </div>
             </div>
 
@@ -781,7 +792,7 @@
                     Pekerjaan
                 </label>
                 <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                name="pekerjaan_wali">
+                name="pekerjaan_wali" value="{{$user->pekerjaan_wali}}">
                 </div>
             </div>
 
@@ -791,13 +802,13 @@
                     Penghasilan Per bulan
                 </label>
                 <select name="penghasilan_per_bulan_wali">
-                    <option value="1"> < Rp. 500.000</option>
-                    <option value="2">Rp. 500.000,- s/d Rp. 999.999,-</option>
-                    <option value="3">Rp. 1.000.000,- s/d Rp. 1.999.999,-</option>
-                    <option value="4">Rp. 2.000.000,- s/d Rp. 4.999.999,-</option>
-                    <option value="5">Rp. 5.000.000,- s/d Rp. 20.000.000,-</option>
-                    <option value="6">> Rp. 20.000.000,-</option>
-                    <option value="7">Tidak Berpenghasilan</option>
+                    <option value="1"@if($user->penghasilan_per_bulan_wali == "1")selected @endif> < Rp. 500.000</option>
+                    <option value="2"@if($user->penghasilan_per_bulan_wali == "2")selected @endif>Rp. 500.000,- s/d Rp. 999.999,-</option>
+                    <option value="3"@if($user->penghasilan_per_bulan_wali == "3")selected @endif>Rp. 1.000.000,- s/d Rp. 1.999.999,-</option>
+                    <option value="4"@if($user->penghasilan_per_bulan_wali == "4")selected @endif>Rp. 2.000.000,- s/d Rp. 4.999.999,-</option>
+                    <option value="5"@if($user->penghasilan_per_bulan_wali == "5")selected @endif>Rp. 5.000.000,- s/d Rp. 20.000.000,-</option>
+                    <option value="6"@if($user->penghasilan_per_bulan_wali == "6")selected @endif> Rp. 20.000.000,-</option>
+                    <option value="7"@if($user->penghasilan_per_bulan_wali == "7")selected @endif>Tidak Berpenghasilan</option>
                 </select>
             </div>
             </div>
@@ -810,8 +821,8 @@
                 <label class="block uppercase text-blueGray-600 text-sm font-bold mb-2">
                     Alamat(kosongi jika sama)
                 </label>
-                <textarea type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                name="alamat_wali"></textarea>
+                <input type="text" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                name="alamat_wali" value="{{$user->alamat_wali}}"></input>
                 </div>
             </div>
 
@@ -821,7 +832,7 @@
                     Nomor Telepon
                 </label>
                 <input type="number" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                name="no_hp_wali">
+                name="no_hp_wali" value="{{$user->no_hp_wali}}">
                 </div>
             </div>
             <div class="relative">

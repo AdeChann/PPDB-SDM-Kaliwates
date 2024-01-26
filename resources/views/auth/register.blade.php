@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     @vite("resources/css/app.css")
     @vite("resources/css/home.css")
-    <title>Document</title>
+    <title>register</title>
   </head>
   <body>
     <div class="font-Poppins flex items-center justify-center min-h-screen bg-gray-100">
@@ -14,6 +14,9 @@
         class=" relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0"
       >
         <!-- left side -->
+        <form action="{{route('register')}}" method="post">
+        @csrf
+
         <div class="flex flex-col justify-center p-8 md:p-14">
           <span class="mb-3 text-4xl font-bold">Register</span>
           <span class="font-light text-gray-400 mb-8">
@@ -48,17 +51,17 @@
           </div>
 
 
-          <button
+          <a href="{{route('register')}}"
             class="  w-full bg-black border text-white border-gray-300 text-md p-2 rounded-lg mb-6 hover:bg-slate-800 hover:text-white"
           >
             Register
-          </button>
+          </a>
           <div class="text-center text-gray-400">
             Dont'have an account?
             <span class="font-bold text-black cursor-pointer">Sign in</span>
           </div>
         </div>
-
+    </form>
       </div>
     </div>
   </body>

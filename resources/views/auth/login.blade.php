@@ -14,8 +14,19 @@
         class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0"
       >
         <!-- left side -->
+    <form action="{{route('login-proses')}}" method="post">
+        @csrf
         <div class="flex flex-col justify-center p-8 md:p-14">
           <span class="mb-3 text-4xl font-bold">Login</span>
+          @if ($errors->any())
+              <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+                <ul>
+                    @foreach ($errors->all() as $item )
+                        <li>{{$item}}</li>
+                    @endforeach
+                </ul>
+              </div>
+          @endif
           <span class="font-light text-gray-400 mb-8">
 
           </span>
@@ -25,18 +36,29 @@
               type="text"
               class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
               name="email"
+              value="{{old('email')}}"
               id="email"
             />
           </div>
+          @error('email')
+          <small>{{$message}}</small>
+
+          @enderror
+
           <div class="py-4">
             <span class="mb-2 text-md">Password</span>
             <input
               type="password"
-              name="pass"
+              name="password"
               id="pass"
               class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
             />
           </div>
+
+          @error('password')
+          <small>{{$message}}</small>
+
+          @enderror
           <div class="flex justify-between w-full py-4">
             <div class="mr-24">
               <input type="checkbox" name="ch" id="ch" class="mr-2" />
@@ -59,8 +81,22 @@
             <span class="font-bold text-black">Sign up for free</span>
           </div>
         </div>
+    </form>
         <!-- {/* right side */} -->
       </div>
     </div>
+    {{-- script --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@if($message = Session::get('failed'))
+<script>
+    swal("email dan password salah");
+</script>
+@endif
+
+@if($message = Session::get('Success'))
+<script>
+    swal.fire("{{ $message }}");
+</script>
+@endif
   </body>
 </html>

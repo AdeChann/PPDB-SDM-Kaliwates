@@ -34,7 +34,7 @@
         </p>
         <div class="flex justify-center md:justify-start">
           <a
-            href="/daftar/ppdb"
+            href="{{route('user.create')}}"
             class="p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight"
             >Daftar Sekarang</a
           >
@@ -283,9 +283,9 @@
       <!-- Button -->
       <div>
         <a
-          href="#"
+          href="{{route('logout')}}"
           class="p-3 px-6 pt-2 text-brightRed bg-white rounded-full shadow-2xl baseline hover:bg-gray-900"
-          >Get Started</a
+          >Logout</a
         >
       </div>
     </div>
